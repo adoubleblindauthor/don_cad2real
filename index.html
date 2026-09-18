@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project page for our research paper">
+  <title>Quick Sim2Deploy</title>
+  <link rel="stylesheet" href="./static/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="container narrow center">
+        <h1>Efficient Adaptation of Dense Object Descriptors with application to CAD-to-real Robotic Grasping</h1>
+        <p class="authors">Anonymous Authors</p>
+        <p class="venue">IEEE Robotics and Automation Letters</p>
+
+        <div class="buttons">
+          <button class="button" onclick="alert('Code will be released upon acceptance')"><span class="icon"><i class="fab fa-github"></i></span> <span>code</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow center">
+        <h2>Abstract</h2>
+        <p>
+          Dense visual descriptors have become a useful object-centric
+          representation for robotic manipulation, as they allow object points,
+          parts, and targets to be matched across different viewpoints and
+          object poses, in both empty and cluttered scenes. However, learning
+          accurate descriptors typically depends on dense correspondence
+          supervision, which is expensive to obtain from real data, while models
+          trained only in simulation often suffer from a sim-to-real gap. We
+          propose an improved Dense Object Nets training pipeline designed to
+          leverage synthetic pretraining and support real-world deployment with
+          minimal annotation effort. The pipeline combines a contrastive pixel-
+          and instance-level loss, triplet-based sample construction,
+          self-matching on real images, and domain-adversarial alignment.
+          Starting from CAD-generated synthetic data, the model is fine-tuned
+          using only a small set of real images, without requiring real
+          object-pose supervision. Experiments on YCB-V and T-LESS evaluate the
+          proposed design and compare the resulting descriptors against recent
+          pretrained visual encoders. Results show that, while large
+          general-purpose encoders are strong for coarse correspondence on
+          common objects, compact specialized DONs remain competitive for
+          accurate matching and less common object domains. Real-world
+          bin-picking experiments further show that the proposed self-matching
+          and domain-adversarial based adaptation improves CAD-to-real keypoint
+          localization and grasp execution compared with synthetic-only training
+        </p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <!-- <h2>Video</h2> -->
+        <div class="media-frame">
+          <video controls autoplay muted loop playsinline preload="metadata">
+            <source src="./static/videos/don_grasping_video.mp4" type="video/mp4" alt="DON Grasping Video">
+          </video>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container narrow center">
+      <p>Website layout inspired by the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page.</p>
+    </div>
+  </footer>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" alt="">
+</div>
+</body>
+</html>
